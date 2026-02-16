@@ -9,8 +9,6 @@ import { NNRenderer, useNNState } from '@/lib/renderers/nn';
 import { GenericRenderer } from '@/lib/renderers/generic';
 import { cn } from '@/lib/utils';
 
-const BASE = import.meta.env.BASE_URL || '/';
-
 function shuffle<T>(arr: T[]): T[] {
   const a = arr.slice();
   for (let i = a.length - 1; i > 0; i--) {
@@ -125,7 +123,7 @@ export function Trainer() {
         <main className="flex-1 flex flex-col items-center justify-center px-4 gap-4">
           <p className="text-slate-600 dark:text-slate-400">Тренажёр не найден.</p>
           <Link
-            to={BASE === '/' ? '/' : BASE}
+            to="/"
             className="min-h-[44px] px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             В каталог
@@ -252,7 +250,7 @@ export function Trainer() {
                 Начать заново
               </button>
               <Link
-                to={BASE === '/' ? '/' : BASE}
+                to="/"
                 className="inline-flex items-center justify-center w-full sm:w-auto min-h-[44px] px-6 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 В каталог

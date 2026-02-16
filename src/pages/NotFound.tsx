@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 
-const BASE = import.meta.env.BASE_URL || '/';
-
 export function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100">
@@ -17,7 +15,7 @@ export function NotFound() {
           Возможно, тренажёр был удалён или адрес введён неверно.
         </p>
         <Link
-          to={BASE === '/' ? '/' : BASE}
+          to="/"
           className="inline-flex items-center justify-center min-h-[44px] px-8 py-3 rounded-xl bg-indigo-600 text-white font-medium hover:bg-indigo-500 dark:bg-indigo-500 dark:hover:bg-indigo-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
         >
           В каталог

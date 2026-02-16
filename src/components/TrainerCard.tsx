@@ -4,8 +4,6 @@ import { IconArrowRight } from './Icons';
 import type { TrainerMeta } from '@/types';
 import { cn } from '@/lib/utils';
 
-const BASE = import.meta.env.BASE_URL || '/';
-
 interface TrainerCardProps {
   trainer: TrainerMeta;
   className?: string;
@@ -18,11 +16,9 @@ const categoryLabels: Record<string, string> = {
 };
 
 export function TrainerCard({ trainer, className }: TrainerCardProps) {
-  const href = BASE === '/' ? `/trainer/${trainer.slug}` : `${BASE}trainer/${trainer.slug}`;
-
   return (
     <Link
-      to={href}
+      to={`/trainer/${trainer.slug}`}
       className={cn(
         'block w-full rounded-2xl border border-slate-200 dark:border-slate-600/80',
         'bg-white dark:bg-slate-800/80 p-5 sm:p-6 text-left shadow-sm',

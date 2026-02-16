@@ -4,8 +4,6 @@ import { IconChevronLeft, IconBookOpen } from './Icons';
 import { ThemeToggle } from './ThemeToggle';
 import { cn } from '@/lib/utils';
 
-const BASE = import.meta.env.BASE_URL || '/';
-
 export function Header({
   title,
   showBack,
@@ -39,7 +37,7 @@ export function Header({
             </button>
           )}
           <Link
-            to={BASE === '/' ? '/' : BASE}
+            to="/"
             className={cn(
               'font-semibold text-slate-800 dark:text-slate-100 truncate min-h-[44px] flex items-center',
               title ? 'text-sm sm:text-base' : 'text-base sm:text-lg'
@@ -55,7 +53,7 @@ export function Header({
         </div>
         <div className="flex items-center gap-1">
           <Link
-            to={BASE === '/' ? '/' : BASE}
+            to="/"
             className="hidden sm:flex items-center justify-center min-w-[44px] min-h-[44px] rounded-lg text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
             aria-label="Каталог"
           >
